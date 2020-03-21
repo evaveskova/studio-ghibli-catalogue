@@ -3,11 +3,14 @@ import { useParams } from 'react-router-dom';
 // import style from './style.module.css';
 
 const Film = () => {
-  let { id } = useParams();
+  const { id } = useParams();
 
   return (
-  <div>Film {id}</div>
-  )
+    <div>
+      Film 
+      {id}
+    </div>
+  );
 };
 
 export default Film;

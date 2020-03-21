@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import style from './style.module.css';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -10,11 +10,11 @@ const Layout = () => (
   <Router>
     <Header />
     <Switch>
-      <Route path="/film/:id">
+      <Route path='/film/:id'>
         <Film />
       </Route>
 
-      <Route path="/">
+      <Route path='/'>
         <Home />
       </Route>
 
