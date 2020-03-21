@@ -7,7 +7,7 @@ const Film = () => {
 
   return (
     <div>
-      Film 
+      Film
       {id}
     </div>
   );

@@ -10,11 +10,11 @@ const Layout = () => (
   <Router>
     <Header />
     <Switch>
-      <Route path='/film/:id'>
+      <Route path="/film/:id">
         <Film />
       </Route>
 
-      <Route path='/'>
+      <Route path="/">
         <Home />
       </Route>
 
