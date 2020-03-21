@@ -1,10 +1,8 @@
 import React from 'react';
-import './style.module.css';
+// import style from './style.module.css';
 
-const Film = () => {
-  return (
+const Film = () => (
     <div></div>
   );
-}
 
 export default Film;

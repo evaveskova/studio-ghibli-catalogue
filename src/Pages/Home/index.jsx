@@ -1,10 +1,8 @@
 import React from 'react';
-import style from './style.module.css';
+// import style from './style.module.css';
 
-const Home = () => {
-  return (
+const Home = () => (
     <section></section>
   );
-}
 
 export default Home;
