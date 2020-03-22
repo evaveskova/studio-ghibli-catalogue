@@ -1,0 +1,24 @@
+.cardWrapper {
+  border: 1px solid salmon;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: salmon;
+}
+
+.cardWrapper:hover {
+  cursor: pointer;
+}
+
+.image {
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+}
+
+.h2 {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+  text-align: center;
+}
