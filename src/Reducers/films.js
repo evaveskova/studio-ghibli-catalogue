@@ -12,6 +12,11 @@ export function filmsReducer(state = initialState, action) {
   }
 }
 
+function getSearchedFilm(state) {
+  // eslint-disable-next-line max-len
+  return state.films.filter(({ title }) => title.toLowerCase().includes(state.searchQuery.toLowerCase()));
+}
+
 export const getFilms = state => state.films;
 
 const sortBy = (property, type) => {
@@ -23,7 +28,7 @@ const sortBy = (property, type) => {
     property = property.substr(1);
   }
   const parse = value => {
-    if (['rt_score'].includes(property)) {
+    if (['rt_score', 'release_date'].includes(property)) {
       return Number(value);
     }
     return value;
@@ -38,29 +43,34 @@ const sortBy = (property, type) => {
       return result * sortOrder;
     };
   }
-  return function desending(a, b) {
-    const result = parse(a[property]) < parse(b[property]) ? 1
-      : parse(a[property]) > parse(b[property])
-        ? -1
-        : 0;
-    return result * sortOrder;
-  };
+  if (type === 'DESC') {
+    return function descending(a, b) {
+      const result = parse(a[property]) < parse(b[property]) ? 1
+        : parse(a[property]) > parse(b[property])
+          ? -1
+          : 0;
+      return result * sortOrder;
+    };
+  }
+  return false;
 };
 
 export const sortedFilms = state => {
-  const { films, sort } = state;
+  const { sort } = state;
+
+  const filteredFilms = getSearchedFilm(state);
 
   switch (sort) {
     case 'title':
-      return films.sort(sortBy(sort, 'ASC'));
+      return filteredFilms.sort(sortBy(sort, 'ASC'));
     case 'rtScore':
-      return films.sort(sortBy('rt_score', 'DESC'));
+      return filteredFilms.sort(sortBy('rt_score', 'DESC'));
     case 'releaseDateAsc':
-      return films.sort(sortBy('release_date', 'ASC'));
+      return filteredFilms.sort(sortBy('release_date', 'ASC'));
     case 'releaseDateDesc':
-      return films.sort(sortBy('release_date', 'DESC'));
+      return filteredFilms.sort(sortBy('release_date', 'DESC'));
     default:
-      return films;
+      return filteredFilms;
   }
 };
 
