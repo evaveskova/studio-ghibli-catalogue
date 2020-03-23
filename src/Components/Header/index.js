@@ -1,8 +1,15 @@
 import React from 'react';
-// import style from './style.module.css';
+import Search from '../SearchBar';
+import style from './style.module.css';
 
-const Header = () => (
-  <header />
-);
+function Header() {
+  return (
+    <header className={style.header}>
+      <div className={style.searchWrapper}>
+        <Search />
+      </div>
+    </header>
+  );
+}
 
 export default Header;
