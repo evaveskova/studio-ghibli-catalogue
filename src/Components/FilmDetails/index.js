@@ -1,10 +1,19 @@
+/* eslint-disable camelcase */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './style.module.css';
 
 const FilmDetails = ({ film }) => {
-  const { title, poster, description, producer, director, rt_score, release_date } = film;
+  const {
+    title,
+    poster,
+    description,
+    producer,
+    director,
+    rt_score,
+    release_date,
+  } = film;
   return (
     <div className={style.content}>
       <div className={style.cardWrapper}>
@@ -25,11 +34,14 @@ const FilmDetails = ({ film }) => {
           <p>Produced by {producer}</p>
           <p>Released {release_date}</p>
           <p>
-            <img src="https://img.icons8.com/dusk/64/000000/tomato.png"
+            <img
+              src="https://img.icons8.com/dusk/64/000000/tomato.png"
               alt="tomato icon"
               width="35vw"
               height="35vh"
-              className={style.icon} />   {rt_score}/100</p>
+              className={style.icon}
+            />   {rt_score}/100
+          </p>
         </div>
       </div>
     </div>
