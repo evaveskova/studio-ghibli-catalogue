@@ -6,7 +6,7 @@ import style from './style.module.css';
 
 function FilmCard({ film }) {
   const {
-    title, poster, id, rt_score, release_date,
+    title, poster, id, rt_score, release_date
   } = film;
   const link = `/film/${id}`;
   return (
