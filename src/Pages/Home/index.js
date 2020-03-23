@@ -1,36 +1,44 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getFilms } from '../../Reducers/films';
-import fetchFilms from '../../Services/FetchFilms';
+import { sortedFilms } from '../../Reducers/films';
+import { sortFilms } from '../../Actions';
+import getFilmsAction from '../../Services/FetchFilms';
 import FilmContent from '../../Components/FilmContent';
 
-const Home = ({ films, fetchFilms }) => {
+const Home = ({ films, getFilms, sortFilms }) => {
   useEffect(() => {
-    fetchFilms();
+    getFilms();
   }, []);
+
+  const handleSortingChange = sorting => {
+    sortFilms(sorting);
+  };
   return (
     <section>
-      <FilmContent films={films} />
+      <FilmContent films={films} handleSortingChange={handleSortingChange} />
     </section>
   );
 };
 
 const mapStateToProps = state => (
   {
-    films: getFilms(state),
+    films: sortedFilms(state),
+    sort: state.sort,
   }
 );
 
 const mapDispatchToProps = dispatch => (
   {
-    fetchFilms: fetchFilms(dispatch),
+    getFilms: getFilmsAction(dispatch),
+    sortFilms: sorting => dispatch(sortFilms(sorting)),
   }
 );
 
 Home.propTypes = {
   films: PropTypes.arrayOf().isRequired,
-  fetchFilms: PropTypes.func.isRequired,
+  getFilms: PropTypes.func.isRequired,
+  sortFilms: PropTypes.func.isRequired,
 };
 
 
