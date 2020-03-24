@@ -15,7 +15,7 @@ const Search = ({ searchQueryProp }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="input">
-          <input name="search" type="text" className={style.search} />
+          <input name="search" type="text" placeholder="Find a Movie" className={style.search} />
         </div>
       </form>
     </div>

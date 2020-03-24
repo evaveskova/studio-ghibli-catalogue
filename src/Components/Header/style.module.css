@@ -1,0 +1,10 @@
+.header {
+ background-color: #fd8a87;
+ border-bottom-left-radius: 5%;
+ border-bottom-right-radius: 5%;
+}
+
+.searchWrapper {
+  float: right;
+  padding: 5rem;
+}
