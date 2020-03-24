@@ -1,13 +1,15 @@
 .inputGroup,
-label,
 input {
   padding: 5px 0;
 }
 
 .search {
-  background-color: inherit;
+  background-color: white;
   border: 1px solid salmon;
   border-radius: 5px;
-  padding: 5px;
+  padding: 8px;
   margin: 0 5px;
+  width: 9rem;
+  color: salmon;
+  
 }

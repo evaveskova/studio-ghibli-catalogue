@@ -1,0 +1,20 @@
+.footerWrapper {
+  padding-top: 160px;
+  align-self: center;
+  display: inline-flex;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.footerText {
+  position: relative;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fd8a87;
+}
