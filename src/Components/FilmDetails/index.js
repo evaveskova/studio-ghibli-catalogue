@@ -30,7 +30,6 @@ const FilmDetails = ({ film }) => {
         <img
           src={poster}
           alt={title}
-        // height="480vh"
           className={style.image}
         />
 

@@ -68,17 +68,28 @@
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  .content {
+  .wrapper {
     margin: 0 5rem;
+    padding: 6rem 1rem;
+  }
+
+  .content {
+    margin: 0;
   }
 
   .image {
+    max-width: 30vw;
     width: 150%;
-    min-width: 25vw;
+    min-width: 15vw;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .wrapper {
+    margin: 0;
+    padding: 6rem 1rem;
+  }
+
   .content {
     margin: 0;
     padding: 0;
@@ -86,6 +97,6 @@
   }
 
   .image {
-    width: 50%;
+    width: 80%;
   }
 }
