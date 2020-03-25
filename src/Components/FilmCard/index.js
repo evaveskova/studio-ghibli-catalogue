@@ -10,7 +10,7 @@ function FilmCard({ film }) {
   } = film;
   const link = `/film/${id}`;
   return (
-    <Link to={link}>
+    <Link to={link} className={style.wrapper}>
       <div className={style.cardWrapper}>
         <img
           src={poster}

@@ -9,6 +9,10 @@
   margin-bottom: -0.3rem;
 }
 
+.link {
+  color: #fd8a87;
+}
+
 .content {
   display: flex;
   align-items: flex-start;

@@ -1,4 +1,5 @@
 .footerWrapper {
+  background-color: #ff5555;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
@@ -8,12 +9,13 @@
 
 
 .footerText {
+  color: white;
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: #fd8a87;
+  color: #ffea9f;
 }
 
 @media screen and (max-width: 600px) {
