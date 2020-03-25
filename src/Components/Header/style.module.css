@@ -1,10 +1,40 @@
 .header {
- background-color: #fd8a87;
- border-bottom-left-radius: 5%;
- border-bottom-right-radius: 5%;
+  z-index: 100;
 }
 
 .searchWrapper {
   float: right;
-  padding: 5rem;
+  padding: 2rem 3rem;
+}
+
+.headerImg {
+  width: 19%;
+  padding-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .headerImg {
+    width: 40%;
+  }
+
+  .header {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding-bottom: 0.3rem;
+  }
+
+  .searchWrapper {
+    margin: 5% 0%;
+    float: none;
+    padding: 0rem;
+    width: 60%;
+  }
+
+  .headerImg {
+    width: 60%;
+  }
 }

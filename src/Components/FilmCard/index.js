@@ -15,19 +15,19 @@ function FilmCard({ film }) {
         <img
           src={poster}
           alt={title}
-          width="100%"
-          height="320px"
           className={style.image}
         />
         <h2 className={style.h2}>
           {title}
-          {' '}
-          /
-          {release_date}
-          {' '}
-          /
-          {rt_score}
         </h2>
+        <h3>
+          {release_date}
+          {'    '}
+          {rt_score}
+          /100
+        </h3>
+
+
       </div>
     </Link>
   );

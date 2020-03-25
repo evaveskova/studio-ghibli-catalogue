@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+
 * {
   margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fcfbf5;
+  /* background-color: teal; */
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: white;
+    /* background-color: teal; */
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
 }

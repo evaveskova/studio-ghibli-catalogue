@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { getFilmByID } from '../../Reducers/films';
 import getFilmsAction from '../../Services/FetchFilms';
 import FilmDetails from '../../Components/FilmDetails';
+import Loader from '../../Components/Loader';
+import style from './style.module.css';
 
 const Film = ({ film, getFilm }) => {
   useEffect(() => {
@@ -11,8 +13,8 @@ const Film = ({ film, getFilm }) => {
   }, []);
 
   return (
-    <section>
-      {film ? <FilmDetails film={film} /> : ''}
+    <section className={style.section}>
+      {film ? <FilmDetails film={film} /> : <Loader />}
     </section>
   );
 };
