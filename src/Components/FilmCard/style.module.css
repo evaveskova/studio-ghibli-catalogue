@@ -9,12 +9,17 @@
 
 .cardWrapper:hover {
   cursor: pointer;
+  background-color: #0f9ceb;
 }
 
 .image {
   border-top-left-radius: 0.9rem;
   border-top-right-radius: 0.9rem;
   width: 100%;
+}
+
+.image:hover {
+  filter: blur(2px);
 }
 
 .h2 {
