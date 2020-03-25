@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FilmCard from '../FilmCard';
+import SortBy from '../SortBy';
 import Loader from '../Loader';
 import style from './style.module.css';
 
@@ -10,38 +11,7 @@ function FilmContent({ films, handleSortingChange, sort }) {
   };
   return (
     <div className={style.wrapper}>
-      <div className={style.sorting}>
-        Sort by:
-        <select
-          name="sortBy"
-          id="sortBy"
-          onChange={handleChange}
-          className={style.dropdown}
-        >
-          <option selected={sort === 'title' ? 'selected' : ''} value="title">
-            Title
-          </option>
-          <option
-            selected={sort === 'rtScore' ? 'selected' : ''}
-            value="rtScore"
-          >
-            Rating
-          </option>
-          <option
-            selected={sort === 'releaseDateAsc' ? 'selected' : ''}
-            value="releaseDateAsc"
-          >
-            Date: (oldest to newest)
-          </option>
-          <option
-            selected={sort === 'releaseDateDesc' ? 'selected' : ''}
-            value="releaseDateDesc"
-          >
-            Date: (newest to oldest)
-          </option>
-        </select>
-      </div>
-
+      <SortBy sort={sort} handleChange={handleChange} />
       {films.length
         ? (
           <div className={style.content}>
