@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FilmCard from '../FilmCard';
+import Loader from '../Loader';
 import style from './style.module.css';
 
 function FilmContent({ films, handleSortingChange, sort }) {
@@ -40,11 +41,14 @@ function FilmContent({ films, handleSortingChange, sort }) {
           </option>
         </select>
       </div>
-      <div className={style.content}>
-        {films
-          ? films.map(film => <FilmCard key={film.id} film={film} />)
-          : null}
-      </div>
+
+      {films.length
+        ? (
+          <div className={style.content}>
+            {films.map(film => <FilmCard key={film.id} film={film} />)}
+          </div>
+        )
+        : <Loader />}
     </div>
   );
 }

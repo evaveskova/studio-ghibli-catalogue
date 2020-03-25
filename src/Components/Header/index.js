@@ -1,18 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Search from '../SearchBar';
-import { title } from '../../Assets/images';
+import { title, header } from '../../Assets/images';
 import style from './style.module.css';
 
 function Header() {
   return (
-    <header className={style.header}>
-      <img
-        className={style.headerImg}
-        src={title}
-        alt="Studio Ghibli"
-        height="150vh"
-        width="30%"
-      />
+    <header
+      className={style.header}
+      style={{ background: `url(${header}) center no-repeat `, backgroundSize: 'cover' }}
+    >
+      <Link to="/">
+        <img
+          className={style.headerImg}
+          src={title}
+          alt="Studio Ghibli"
+        />
+      </Link>
       <div className={style.searchWrapper}>
         <Search />
       </div>
