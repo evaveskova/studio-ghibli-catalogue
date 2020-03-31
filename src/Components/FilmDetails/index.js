@@ -57,7 +57,16 @@ const FilmDetails = ({ film }) => {
 };
 
 FilmDetails.propTypes = {
-  film: PropTypes.objectOf().isRequired,
+  film: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+    director: PropTypes.string,
+    producer: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default FilmDetails;

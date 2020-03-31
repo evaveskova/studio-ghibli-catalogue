@@ -34,7 +34,13 @@ function FilmCard({ film }) {
 }
 
 FilmCard.propTypes = {
-  film: PropTypes.objectOf().isRequired,
+  film: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+  }).isRequired,
 };
 
 export default FilmCard;

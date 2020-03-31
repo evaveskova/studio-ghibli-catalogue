@@ -11,24 +11,22 @@ function SortBy({ sort, handleChange }) {
         id="sortBy"
         onChange={handleChange}
         className={style.dropdown}
+        value={sort}
       >
-        <option selected={sort === 'title' ? 'selected' : ''} value="title">
+        <option value="title">
           Title
         </option>
         <option
-          selected={sort === 'rtScore' ? 'selected' : ''}
           value="rtScore"
         >
           Rating
         </option>
         <option
-          selected={sort === 'releaseDateAsc' ? 'selected' : ''}
           value="releaseDateAsc"
         >
           Date: (oldest to newest)
         </option>
         <option
-          selected={sort === 'releaseDateDesc' ? 'selected' : ''}
           value="releaseDateDesc"
         >
           Date: (newest to oldest)
@@ -40,7 +38,7 @@ function SortBy({ sort, handleChange }) {
 
 SortBy.propTypes = {
   handleChange: PropTypes.func.isRequired,
-  sort: PropTypes.func.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 export default SortBy;

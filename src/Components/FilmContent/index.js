@@ -24,9 +24,15 @@ function FilmContent({ films, handleSortingChange, sort }) {
 }
 
 FilmContent.propTypes = {
-  films: PropTypes.arrayOf().isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+  })).isRequired,
   handleSortingChange: PropTypes.func.isRequired,
-  sort: PropTypes.func.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 
