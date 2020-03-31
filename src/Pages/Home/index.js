@@ -6,7 +6,9 @@ import { sortFilms } from '../../Actions';
 import getFilmsAction from '../../Services/FetchFilms';
 import FilmContent from '../../Components/FilmContent';
 
-const Home = ({ films, getFilms, sortFilms, sort }) => {
+const Home = ({
+  films, getFilms, sortFilms, sort,
+}) => {
   useEffect(() => {
     getFilms();
   }, []);
