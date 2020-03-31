@@ -7,7 +7,7 @@ For Film Posters, it uses the [IMDB API](http://www.omdbapi.com/).
 ![screenshot](./src/Assets/screenshot.png)
 
 ### Live Demo
-To view the live link, [click here](https://heuristic-borg-8c1237.netlify.com/).
+To view the live link, [click here](https://studioghiblicatalogue.netlify.com/).
 
 ### Technologies Used
 * ReactJS
