@@ -13,7 +13,7 @@ const Film = ({ film, getFilm }) => {
   }, []);
 
   return (
-    <section className={style.section}>
+    <section className={style.section} id="main">
       {film ? <FilmDetails film={film} /> : <Loader />}
     </section>
   );

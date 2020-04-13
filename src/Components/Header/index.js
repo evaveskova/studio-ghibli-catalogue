@@ -6,6 +6,7 @@ import style from './style.module.css';
 
 const Header = () => (
   <header
+    id="header"
     className={style.header}
     style={{ background: `url(${header}) center no-repeat `, backgroundSize: 'cover' }}
   >

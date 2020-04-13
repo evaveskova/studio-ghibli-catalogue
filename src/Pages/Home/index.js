@@ -17,7 +17,7 @@ const Home = ({
     sortFilms(sorting);
   };
   return (
-    <section style={{ marginTop: '-5rem' }}>
+    <section style={{ marginTop: '-5rem' }} id="main">
       <FilmContent films={films} handleSortingChange={handleSortingChange} sort={sort} />
     </section>
   );
