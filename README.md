@@ -15,6 +15,8 @@ To view the live link, [click here](https://studioghiblicatalogue.netlify.com/).
 * JavaScript
 * HTML
 * CSS
+* Jest
+* Enzyme
 
 The loader used in this project was designed by [ilithya on codepen](https://codepen.io/ilithya/pen/WdJLPY).
 
