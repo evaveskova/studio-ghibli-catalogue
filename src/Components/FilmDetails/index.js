@@ -31,13 +31,14 @@ const FilmDetails = ({ film }) => {
           src={poster}
           alt={title}
           className={style.image}
+          id="poster"
         />
 
         <div className={style.details}>
-          <h2 className={style.h2}>{title}</h2>
+          <h2 className={style.h2} id="title">{title}</h2>
           <p className={style.description}>{description}</p>
           <div className={style.notes}>
-            <p>Directed by {director}</p>
+            <p id="director">Directed by {director}</p>
             <p>Produced by {producer}</p>
             <p>Released {release_date}</p>
             <p className={style.rating}>

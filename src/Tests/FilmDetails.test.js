@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
-import FilmCard from '../Components/FilmCard';
+import FilmDetails from '../Components/FilmDetails';
 
-let filmCardComponent;
+let filmDetailsComponent;
 const film = {
   id: '123',
   title: 'Castle In The Sky',
@@ -15,20 +15,25 @@ const film = {
   url: 'https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe',
   poster: 'https://m.media-amazon.com/images/M/MV5BNTg0NmI1ZGQtZTUxNC00NTgxLThjMDUtZmRlYmEzM2MwOWYwXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg'
 };
-describe('FilmCard component renders correctly', () => {
+describe('filmDetailsComponent component renders correctly', () => {
   beforeEach(() => {
-    filmCardComponent = render(
-      <Router><FilmCard film={film} /></Router>,
+    filmDetailsComponent = render(
+      <Router><FilmDetails film={film} /></Router>,
     );
   });
 
   it('should render title properly', () => {
-    const title = filmCardComponent.find('h2#title');
+    const title = filmDetailsComponent.find('h2#title');
     expect(title.text()).toEqual(film.title);
   });
 
   it('should render image', () => {
-    const poster = filmCardComponent.find('img#poster');
+    const poster = filmDetailsComponent.find('img#poster');
     expect(poster.attr('src')).toEqual(film.poster);
+  });
+
+  it('should render director', () => {
+    const director = filmDetailsComponent.find('p#director');
+    expect(director.text()).toEqual(`Directed by ${film.director}`);
   });
 });
