@@ -16,8 +16,9 @@ function FilmCard({ film }) {
           src={poster}
           alt={title}
           className={style.image}
+          id="poster"
         />
-        <h2 className={style.h2}>
+        <h2 className={style.h2} id="title">
           {title}
         </h2>
         <h3>

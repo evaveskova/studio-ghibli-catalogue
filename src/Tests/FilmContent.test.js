@@ -18,7 +18,8 @@ describe('FilmContent component renders correctly', () => {
       poster: 'https://m.media-amazon.com/images/M/MV5BNTg0NmI1ZGQtZTUxNC00NTgxLThjMDUtZmRlYmEzM2MwOWYwXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg'
     }];
     filmContentComponent = render(
-      <Router><FilmContent films={films} handleSortingChange={() => {}} sort="title" /></Router>);
+      <Router><FilmContent films={films} handleSortingChange={() => {}} sort="title" /></Router>,
+    );
   });
 
   it('should render content wrapper', () => {
