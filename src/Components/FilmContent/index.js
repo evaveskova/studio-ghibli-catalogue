@@ -14,7 +14,7 @@ function FilmContent({ films, handleSortingChange, sort }) {
       <SortBy sort={sort} handleChange={handleChange} />
       {films.length
         ? (
-          <div className={style.content}>
+          <div className={style.content} id="content">
             {films.map(film => <FilmCard key={film.id} film={film} />)}
           </div>
         )
