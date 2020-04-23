@@ -30,15 +30,15 @@ const FilmDetails = ({ film }) => {
         <img
           src={poster}
           alt={title}
-        // height="480vh"
           className={style.image}
+          id="poster"
         />
 
         <div className={style.details}>
-          <h2 className={style.h2}>{title}</h2>
+          <h2 className={style.h2} id="title">{title}</h2>
           <p className={style.description}>{description}</p>
           <div className={style.notes}>
-            <p>Directed by {director}</p>
+            <p id="director">Directed by {director}</p>
             <p>Produced by {producer}</p>
             <p>Released {release_date}</p>
             <p className={style.rating}>
@@ -58,7 +58,16 @@ const FilmDetails = ({ film }) => {
 };
 
 FilmDetails.propTypes = {
-  film: PropTypes.objectOf().isRequired,
+  film: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+    director: PropTypes.string,
+    producer: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default FilmDetails;

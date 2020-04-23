@@ -16,8 +16,9 @@ function FilmCard({ film }) {
           src={poster}
           alt={title}
           className={style.image}
+          id="poster"
         />
-        <h2 className={style.h2}>
+        <h2 className={style.h2} id="title">
           {title}
         </h2>
         <h3>
@@ -34,7 +35,13 @@ function FilmCard({ film }) {
 }
 
 FilmCard.propTypes = {
-  film: PropTypes.objectOf().isRequired,
+  film: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+  }).isRequired,
 };
 
 export default FilmCard;

@@ -3,7 +3,7 @@ import style from './style.module.css';
 import { radish } from '../../Assets/images';
 
 const Footer = () => (
-  <footer className={style.footerWrapper}>
+  <footer className={style.footerWrapper} id="footer">
     <img
       src={radish}
       alt="Radish Spirit"

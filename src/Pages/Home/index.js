@@ -6,7 +6,9 @@ import { sortFilms } from '../../Actions';
 import getFilmsAction from '../../Services/FetchFilms';
 import FilmContent from '../../Components/FilmContent';
 
-const Home = ({ films, getFilms, sortFilms }) => {
+const Home = ({
+  films, getFilms, sortFilms, sort,
+}) => {
   useEffect(() => {
     getFilms();
   }, []);
@@ -15,8 +17,8 @@ const Home = ({ films, getFilms, sortFilms }) => {
     sortFilms(sorting);
   };
   return (
-    <section style={{ marginTop: '-5rem' }}>
-      <FilmContent films={films} handleSortingChange={handleSortingChange} />
+    <section style={{ marginTop: '-5rem' }} id="main">
+      <FilmContent films={films} handleSortingChange={handleSortingChange} sort={sort} />
     </section>
   );
 };
@@ -36,9 +38,16 @@ const mapDispatchToProps = dispatch => (
 );
 
 Home.propTypes = {
-  films: PropTypes.arrayOf().isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+  })).isRequired,
   getFilms: PropTypes.func.isRequired,
   sortFilms: PropTypes.func.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 

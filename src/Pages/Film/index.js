@@ -13,7 +13,7 @@ const Film = ({ film, getFilm }) => {
   }, []);
 
   return (
-    <section className={style.section}>
+    <section className={style.section} id="main">
       {film ? <FilmDetails film={film} /> : <Loader />}
     </section>
   );
@@ -29,8 +29,21 @@ const mapDispatchToProps = (dispatch, { props }) => ({
 
 
 Film.propTypes = {
-  film: PropTypes.objectOf().isRequired,
+  film: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+    director: PropTypes.string,
+    producer: PropTypes.string,
+    description: PropTypes.string,
+  }),
   getFilm: PropTypes.func.isRequired,
+};
+
+Film.defaultProps = {
+  film: {},
 };
 
 

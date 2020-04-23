@@ -14,7 +14,7 @@ function FilmContent({ films, handleSortingChange, sort }) {
       <SortBy sort={sort} handleChange={handleChange} />
       {films.length
         ? (
-          <div className={style.content}>
+          <div className={style.content} id="content">
             {films.map(film => <FilmCard key={film.id} film={film} />)}
           </div>
         )
@@ -24,9 +24,15 @@ function FilmContent({ films, handleSortingChange, sort }) {
 }
 
 FilmContent.propTypes = {
-  films: PropTypes.arrayOf().isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    release_date: PropTypes.string,
+    rt_score: PropTypes.string,
+  })).isRequired,
   handleSortingChange: PropTypes.func.isRequired,
-  sort: PropTypes.func.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 

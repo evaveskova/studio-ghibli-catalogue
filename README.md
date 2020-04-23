@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Studio Ghibli Film Catalogue
+This is a catalogue of all Studio Ghibli films, built with React and Redux. On the Home Page, users can see a list of Studio Ghibli films with a corresponding movie poster, title, rating, and year of release. Upon clicking one of these film cards, users can then see more details about their chosen film (full description, director, proudcer, rating, and year of release). Users can also search for a specific title, or can sort by title, rating, oldest to newest, or newest to oldest.
 
-## Available Scripts
+For Film Details, this project uses a [Studio Ghibli API](https://ghibliapi.herokuapp.com/).
+For Film Posters, it uses the [IMDB API](http://www.omdbapi.com/).
 
-In the project directory, you can run:
+![screenshot](./src/Assets/screenshot.png)
 
-### `yarn start`
+### Live Demo
+To view the live link, [click here](https://studioghiblicatalogue.netlify.com/).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technologies Used
+* ReactJS
+* Redux
+* JavaScript
+* HTML
+* CSS
+* Jest
+* Enzyme
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The loader used in this project was designed by [ilithya on codepen](https://codepen.io/ilithya/pen/WdJLPY).
 
-### `yarn test`
+### 👤 Author
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Github: [@evaveskova](https://github.com/evaveskova)
+* Linkedin: [Eva Veskova Jackson](https://www.linkedin.com/in/evaveskova/)
 
-### `yarn build`
+### How to Use
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Visit the live link or clone the project in the terminal by running
+```
+git clone https://github.com/evaveskova/studio-ghibli-catalogue.git
+```
+* Open the project and install dependencies
+```
+npm start
+```
+* Start the server localhost:3000 
+```
+npm start
+```
+* Browse the Page
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Future Feature Plans
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Create seperate pages which will species, characters, or locations from Studio Ghibli movies
+* Implement detail pages for each species, character, or location
+* Add animations & improve styling.
 
-### `yarn eject`
+### 🤝 Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contributions, issues and feature requests are welcome!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Show your support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Give a ⭐️ if you like this project!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 📝 License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is [MIT](lic.url) licensed.
